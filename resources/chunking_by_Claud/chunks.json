@@ -1,72 +1,156 @@
 [
   {
-    "topic": "Purpose and Overview",
-    "content": "Procedure\n\nBranch Banking; Business Banking; Customer Care Center\n\nLast Published Date:  9/8/2022\n\nPurpose\n\nThis procedure explains debit and banking card daily limits for ATM withdrawals, deposits, PIN point-of-sale (POS) transactions and non-PIN POS transactions.\nInstructions are provided for handling customer requests to increase or decrease the daily limit for debit/banking card ATM or POS transactions.\n \n\nOverview\n\nPurpose of debit/banking card ATM and POS daily limits\nHow card limits are determined\nLimits restrict dollar amount per day\nATM and POS transaction limits can be changed \nChanging a customer's account product type and ATM/POS limits\nCertain card or account maintenance can result in a limit change\nTemporary Non-PIN POS or emergency ATM limit increases\nStandard daily limits for ATM, PIN POS and non-PIN POS transactions\nBefore changing a cardholder's ATM or POS daily limits",
+    "topic": "Introduction and Table of Contents",
+    "content": "* * Policy * * ! [ 0_image_0.png ] ( 0_image_0.png ) ! [ 0_image_1.png ] ( 0_image_1.png ) 2023 # Where To Find Things | What is ordinary commute ? | | | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -| | What is classed as a permanent workplace ? ........................................................................................................... 3 | | | 1 . | Roles with one normal workplace | | 2 . | | | 3 . | Roles with two or more normal workplaces , Dual located or multi-sited roles ............................................. 3 | | 4 . | Regionally based roles ........................................................................................................................................... 4 | | a . | You live within your region .................................................................................................................................... 4 | | You live outside your region ................................................................................................................................ 4 | | | b . | | | 5 . | Nationally based roles . | | 6 . | TEMPORARY WORKPLACE | | 7 . When does a temporary workplace become a permanent workplace ? .......................................................... 5 | | | 8 . FAQ 's | | | G Guide info . | | | Guide owner | | | Ownership and confidentiality ......................................................................................................................... 6 | | | Appendix 1 - Commute type and what you can claim for\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u20268 |",
     "start_index": 0,
-    "end_index": 899,
-    "num_tokens": 144
+    "end_index": 2018,
+    "num_tokens": 356
   },
   {
-    "topic": "Purpose of Daily Limits and How They Are Determined",
-    "content": "How To - Change a debit/banking cardholder's daily ATM or POS limits\nSupporting Resources \n\nAudience\n\nBranch; Business Banking; Customer Care Center\n\nPurpose of debit/banking card ATM and POS daily limits\n\nDaily limits for ATM withdrawals, POS and non-PIN POS transactions are established to protect customers' accounts from greater losses in the event of\nunauthorized use. \n\nHow card limits are determined\n\nVirtual Wallet  limits are set automatically with the Virtual Wallet Spend account. Non-Virtual Wallet limits are set automatically when the customer's debit/banking\n\u00ae\n\ncard is ordered based on the highest-feature account accessed with the card. For example, a customer uses the ATM, and their debit card accesses a Standard\naccount and a Performance account. The card limits will be that of the Performance account because it has higher features than the Standard account.\n\nLimits restrict dollar amount per day\n\nDaily limits restrict the total dollar amount of ATM, PIN POS and non-PIN POS transactions performed by a cardholder using a \n.\nsingle card each calendar day\n\nFor example, a card that's restricted to a $1,000 ATM withdrawal limit can be used to withdraw $1,000 each day. The limit applies whether the card is used in one\ntransaction of $1,000 or ten transactions of $100.",
-    "start_index": 900,
-    "end_index": 2193,
-    "num_tokens": 226
+    "topic": "What Is Ordinary Commute?",
+    "content": "# # What Is Ordinary Commute ? Ordinary commute is your journey to and from your normal place of work . Your normal place of work is anywhere you go on a regular and permanent ( permanent being more than 12 months ) basis to carry out your normal work duties - this is defined by HMRC . In most circumstances , you can not claim any travel costs for your ordinary commute . This not only applies to fuel , but also to train , plane and bus fares . The commute is based on how often you visit the same location and annual leave is factored into this . You may visit differing people at the same location , or you may visit the same location regularly for only a couple of hours , in both scenario 's this would still be classed as an ordinary commute . It is your responsibility to ensure that you comply with the 'Commute rules ' when completing your normal mileage return . We will conduct regular audits to ensure that there are no unintended infringements . Managers are expected to review their teams mileage to ensure compliance . There is also a requirement for both the Manager and colleague to ensure that the correct normal commute locations are entered into SAP .",
+    "start_index": 2019,
+    "end_index": 3192,
+    "num_tokens": 221
   },
   {
-    "topic": "Changing ATM and POS Limits",
-    "content": "ATM and POS transaction limits can be changed\n\nThe cardholder can request to change the debit/banking card ATM, PIN POS and non-PIN POS transaction limits through a branch or the Customer Care\nCenter. Joint owners are unable to request a change to the transaction limits. For business debit/banking cards, you can \nincrease or decrease the ATM and\nonly \n\nnon-PIN POS limit\nthe limit change is requested by an authorized signer on the primary business checking account. Foundation Checking accounts \neligible\n if \naren't \n\nfor ATM and non-PIN limit increases.\n\nWhen a limit change request is submitted for:\n\n\nThis is a table with the caption: A product type transfer Creating a package and linking/removing benefit accounts Activating/deactivating account access on the card Account status change (e.g., the account status changes to inactive, which could change the highest feature on the account) This table presents values for an entity, with each column representing a different value. The leftmost column, labeled \"Entity,\" likely refers to a specific category or variable being measured.\n\nThe remaining columns contain numerical values, ranging from negative values to positive values, with each column representing a narrower range of values. Here is a breakdown of the values in each column:\n\n* Column 1: Values less than 0 (negative values)\n* Column 2: Values between 1.515 and 1.525\n* Column 3: Values between 1.525 and 1.55\n* Column 4: Values between 1.55 and 1.578\n* Column 5: Values between 1.578 and 1.595\n* Column 6: Values between 1.595 and 1.611\n* Column 7: Values between 1.611 and 1.607\n* Column 8: Values between 1.607 and 1.619\n* Column 9: Values between 1.619 and 1.623\n* Column 10: Values between 1.623 and 1.638\n* Column 11: Values between 1.638 and 1.642\n* Column 12: Values between 1.642 and 1.613\n* Column 13: Values between 1.613 and 1.592\n* Column 14: Values between 1.592 and 1.589\n* Column 15: Values between 1.589 and 1.544\n* Column 16: Values between 1.544 and 1.536\n* Column 17: Values between 1.536 and 1.528\n* Column 18: Values between 1.528 and 1.511\n\nWithout further context, it is difficult to say what these values represent or what the entity is. However, the table provides a clear overview of the distribution of values within each range.",
-    "start_index": 2194,
-    "end_index": 4474,
-    "num_tokens": 425
+    "topic": "What Is Classed As A Permanent Workplace?",
+    "content": "# # 1 . What Is Classed As A Permanent Workplace ? It is usually clear whether or not a location is your permanent workplace ( and , therefore , whether a journey to or from that place is ordinary commuting ) . A place is a permanent workplace if you attend it regularly to perform your duties of employment , and it is not a temporary workplace ( see Section 7 ) . You attend a workplace regularly if your attendance is : - Frequent ( At least once a week , it does not have to be the same day each week ) - For all or almost all of the period for which you hold or are likely to hold that employment It 's possible that you may have two or more normal workplaces depending on your working arrangements .",
+    "start_index": 3193,
+    "end_index": 3898,
+    "num_tokens": 143
   },
   {
-    "topic": "Temporary and Emergency Limit Increases",
-    "content": "Temporary Non-PIN POS or emergency ATM limit increases \nThe columns are Customer Connection\n\nAn increase \nthe \nlimit, up to and including the \nlimit (as shown on the \n screen in Service Browser or the \nabove \nDefault \nMaximum \nPlate Maintenance\nDaily\n\nATM & Purchase Limits screen in EDGE), the request will be sent for review and will be approved or denied by 8 p.m. ET the same business day, or the\nnext business day if requested after 8 p.m. ET.  You'll receive a CRISS Reference Number and can check the status of an increase request by using this\nnumber. \n\nFor any completed limit change up to the maximum limit, PNC will mail the customer a debit/banking card limit change notice disclosing the new limits.\n\nChanging a customer's account product type and ATM/POS limits\n\nIn most instances when a branch or Customer Care Center employee makes a product type change \n/\n) for a customer, their card type and card\n(Business Consumer\n\nlimits will be updated and PNC will mail a letter confirming the new card limits.",
-    "start_index": 4475,
-    "end_index": 5492,
-    "num_tokens": 190
+    "topic": "Roles With One Normal Workplace",
+    "content": "# # 2 . Roles With One Normal Workplace If you have one normal place of work , travel to and from this location is your ordinary commute and can not be claimed for . I work in Haydock DC and travel there from home five days a week . I can not claim any of my journeys to or from Haydock .",
+    "start_index": 3899,
+    "end_index": 4187,
+    "num_tokens": 63
   },
   {
-    "topic": "Card Maintenance Resulting in Limit Changes",
-    "content": "Certain card or account maintenance can result in a limit change\n\nDebit/banking card limits are established based on the highest feature on the account. This means that certain maintenance performed on a card may result in a\nchange to the card's limits. The following maintenance could result in a change to the highest feature on the account, which may change the card limits:\n\n\nA product type transfer\nCreating a package and linking/removing benefit accounts\nActivating/deactivating account access on the card\nAccount status change (e.g., the account status changes to inactive, which could change the highest feature on the account)\n\nA product type transfer\nCreating a package and linking/removing benefit accounts\nActivating/deactivating account access on the card\nAccount status change (e.g., the account status changes to inactive, which could change the highest feature on the account)\n\nWhen a customer's card limits change, they'll be sent a notice in the mail the business day following the card limit change. The notice lists the customer's current\nATM withdrawal, PIN POS and non-PIN POS card limits.\n\nIf a customer has questions about the notice they received, review the \n. Look to see if the customer recently requested a\nservice request history for their account\n\nproduct type transfer, package maintenance or to activate/deactivate account access on the debit or banking card. Any of these actions could have prompted the\ncard limits to change. Additionally, when an account doesn't have any customer activity for six months, the account status will change to inactive. This may cause\nthe card limits to change, which will prompt a debit/banking card limit notice to be sent to the customer.",
-    "start_index": 5493,
-    "end_index": 7200,
-    "num_tokens": 299
+    "topic": "Roles With Two Or More Normal Workplaces, Dual Located Or Multi-Sited Roles",
+    "content": "# # 3 . Roles With Two Or More Normal Workplaces , Dual Located Or Multi-Sited Roles If you have more than one normal place of work , travel to and from any of these locations is your ordinary commute and can not be claimed for or supplemented . I am based in the Equity office , but I travel to Eccles every Monday and Deeside every Wednesday . All three of these locations will be my normal place of work and I can not claim any of my * * journeys to or from them . * * I am based in the Watford office , but once a week I work from High Wycombe . I do n't work from High Wycombe * * on a set day * * each week , it can depend on which day is most suitable , High Wycombe is still a normal place of work and I can not claim for my journey to and from here as it is my ordinary commute . In my role I look after four different branches in my area . I visit all four of these branches once a week in order to perform my duties . Journeys to and from home to these sites can not be claimed for or supplemented , however my travel in * * between * * these * * sites can be claimed for . E.g . I look after Avonmouth , Bristol , Bath and Trowbridge branches . I can not claim for my * * travel to and from these branches * * to home , but when I travel to Avonmouth and then on to Bristol in the same day , I can * * claim for my journey between Avonmouth and Bristol , but not from Bristol to home . A normal place of work does n't just apply to our offices or branches , it can also apply to suppliers , if you visit a certain supplier on a regular and permanent basis . I work in Quality Control and as part of my role I visit one of our suppliers every Friday in order to carry out the duties of my role . I have visited this supplier on Fridays for the past 18 months . As I visit this location on a regular and * * permanent * * basis it is a normal place of work , therefore my journey to and from here is an ordinary commute and can not be * * claimed * * for . If you have one or more normal place ( s ) of work and travel to a different location for a temporary business purpose and a limited duration , travel from home to the different location can be claimed for . Being cost conscious , we do n't expect you to claim if your journey is shorter than your ordinary commute and/or it costs less . Effectively you are already saving money on your journey . I am based in the Wellingborough DC , but I attend a training day at the Northampton * * branch . I can claim all of my journey * * to and from home and the Northampton branch , as this is longer than my normal commute to Wellingborough . When I attended a training day at Kettering , this journey was much shorter than my normal commute to * * Wellingborough , therefore * * I did n't claim for the * * journey . * * I am based in Hatfield DC and I need to attend a meeting in Equity . I have only been to the Equity offices once before , * * therefore * * it is not my normal place of work . I can claim my travel , train fare or bus fare to and from the Equity * * office . * *",
+    "start_index": 4188,
+    "end_index": 7232,
+    "num_tokens": 656
   },
   {
-    "topic": "Non-PIN POS, ATM and PIN POS Limit Increases",
-    "content": "Non-PIN POS: Call \n to request temporary increases to a customer's non-PIN POS limits over their \nlimit, as shown on the\nCard Loss Prevention\nMaximum \n\nscreen in Service Browser or the \nscreen in EDGE, up to midnight of the day of the temporary\nPlate Maintenance \nDaily ATM & Purchase Limits \n\nincrease.\n\nFoundation Checking accounts \neligible for ATM and non-PIN limit increases.\naren't \n\nATM: See \n for emergency requests to temporarily increase ATM limits.\nRequesting Temporary ATM Limit Increases for Customer Emergencies\n\nPIN POS: Emergency limit increases to PIN POS limits \n be performed.\ncan't\n\n[Back to top]",
-    "start_index": 7201,
-    "end_index": 7817,
-    "num_tokens": 107
+    "topic": "Regionally/Area Based Roles",
+    "content": "# # 4 . Regionally/Area Based Roles If you are regionally/area based , your normal place of work will be your region/area . Any travel within your region/area can be claimed for , unless it is to a normal workplace . If you are regionally based and live outside of your region/area , we have agreed with HMRC that travel to and from the closest site/store in your region/area can not be claimed for . ( This may not be your normal place of work ) This amount of miles must be deducted from any other claims your make when travelling into your region .",
+    "start_index": 7233,
+    "end_index": 7784,
+    "num_tokens": 105
   },
   {
-    "topic": "Standard Daily Limits for Transactions",
-    "content": "Standard daily limits for ATM, PIN POS and non-PIN POS transactions\n\nProvided below are total dollar limits for ATM, PIN POS and non-PIN POS and deposit transactions per card per calendar day for:\n\nPNC Banking Cards \nPNC Debit Cards\nPNC Gold Debit Cards (not actively sold) \n\n \n\n\nThis is a table with the caption: This linearized table appears to represent a chart comparing the capabilities of different types of financial transaction systems. The columns of the table represent different system types, including ATM Hildyard, PIN POS, Non-PPM POS, and ATM depout (which may refer to an ATM deposit function). The rows represent different transaction types, such as Business (inquiry only), Conference (inquiry only), and Visitor (which can be either an inquiry or not).\n\nThe values in the table indicate whether a particular transaction type is supported by a given system type. A value of \"1\" indicates that the transaction type is supported, while a value of \"11\" may indicate that it is not.\n\nBased on the table, it appears that all of the system types are capable of supporting Business (inquiry only), Conference (inquiry only), and Visitor (inquiry or not) transactions. However, there are some differences in the capabilities of the different system types when it comes to other transaction types.\n\nFor example, the ATM Hildyard system supports ATM depout transactions, while the PIN POS and Non-PPM POS systems do not. On the other hand, the PIN POS and Non-PPM POS systems support Non-PPM transactions, while the ATM Hildyard and ATM depout systems do not.\n\nOverall, this table provides a useful overview of the capabilities of different financial transaction systems with respect to various transaction types. However, it does not provide enough information to make specific recommendations or comparisons between the systems. Additional context and information would be needed to make more informed conclusions.",
-    "start_index": 7818,
-    "end_index": 9742,
-    "num_tokens": 357
+    "topic": "You Live Within Your Region",
+    "content": "# # A . You Live Within Your Region If you live inside your region and do not have a normal place of work , any travel to Booker sites can be claimed for . If you live within your region and have a normal place of work/base office within your region , then travel to and from this location can not be claimed for , as this is ordinary commute . I live within my region , which is Region One . My normal place of work is Falkirk and I can not claim my journeys to and from this store as it is my ordinary commute . When I travel to other stores within my region , which are not a normal * * place of * * work , I can claim for these * * journeys . * * If you live within your region and have a normal place of work somewhere outside of your region , then you will not be able to claim for this journey . I live within my region but attend a team meeting on a fortnightly * * basis in a set location outside of my region . I can claim * * for this journey as this would be regarded as a temporary workplace . However , if the team meeting was on a weekly basis , I would be visiting this location on a regular and permanent basis and therefore I can not claim for the journey as it would be classed as my ordinary commute .",
+    "start_index": 7785,
+    "end_index": 9006,
+    "num_tokens": 260
   },
   {
-    "topic": "PNC Debit Cards Limits",
-    "content": "PNC Debit Cards \nThe columns are PNC Banking Cards, Col1, Col2, Col3, Col4\n\nThis is a table with the caption: Performance Checking $1,000 $1,000 n/a $999,999.99 This linearized table appears to contain data related to a series of tests or experiments, with each row representing a different trial. The leftmost column, labeled \"TITLE,\" contains various titles or descriptions for each trial, such as \"PMC<0x0A>Gary Lamb\" and \"Performance Ghacking<0x0A>Virtual Wal1 if you want to know how to get.\"\n\nThe second column, labeled with the special character code <0x0A>, appears to be a separator column and does not contain any meaningful data.\n\nThe remaining columns represent different metrics or variables that were measured during each trial. For example, the columns labeled \"Virtual Wal1 if you want to know how to get\" contain numerical values that appear to represent some kind of score or result. In the first row, the value in this column is 1000 for the trial titled \"PMC<0x0A>Gary Lamb,\" while in the second row, the value is 1200 for the trial titled \"PMC<0x0A>Hindi.\"\n\nIt is not clear from the table alone what these metrics represent or how they were measured. However, it is possible to make some educated guesses based on the patterns and values observed in the data. For example, it seems that many of the trials have the same values in the \"Favariation Chwking\" and \"Gd\" columns, which could suggest that these columns represent some kind of baseline or control variable that was measured consistently across all trials.\n\nOverall, this linearized table appears to contain data from a series of experiments or tests, with each row representing a different trial and each column representing a different metric or variable that was measured during that trial. However, more context and information would be needed to fully understand and interpret the data presented in this table.",
-    "start_index": 9743,
-    "end_index": 11637,
-    "num_tokens": 375
+    "topic": "You Live Outside Your Region",
+    "content": "# # B . You Live Outside Your Region If you live outside of your region and are travelling into your region to visit a third party or Booker location , we have agreed with HMRC that you can not claim for any travel from your home to the nearest Booker site within your region and this particular journey will be deemed as your ordinary commute . When you travel to another location within your region , you must deduct this ordinary commute from the mileage you are claiming . I live outside of my region and * * my journey to the nearest Booker Branch/site in my region is 26 miles , this is my ordinary * * commute . I travel from home to a different branch in my region , which is 118 miles away . I can not claim for the first 26 miles , meaning my claim would be 92 miles ( 118-26 = 92 ) . I would make the same deduction when travelling home . If you live outside your region and visit a location outside of your region on a regular and permanent basis to perform your work duties , then you will not be able to claim for this journey . My region is Region 3 , but every Monday I attend a team meeting in Equity for four hours . Therefore , on a Monday , Equity is my normal place of work , and I can not claim for my journey to and from Equity .",
+    "start_index": 9007,
+    "end_index": 10259,
+    "num_tokens": 257
   },
   {
-    "topic": "PNC Gold Debit Cards (not actively sold) Limits",
-    "content": "PNC Gold Debit Cards (not actively sold products) \nThe columns are PNC Debit Cards, Col1, Col2, Col3, Col4\n\nThis is a table with the caption: $1,500 $2,000 $10,000 $999,999.99 This linearized table presents data on the number of PMC Gold Dash Cards, which are not severely sold products, across different years and various garden type/highlink account/harium, individuals, and systems. Here is a summary of the data:\n\n* From 2009 to 2019, there were a total of 2 PMC Gold Dash Cards in use each year, except for 2009, 2011, and 2010, where there was 1 card in use. These cards were used in the following categories:\n\t1. Gard type/highlink account/harium\n\t2. Gary Smith\n\t3. ATM/inland/wellington\n\t4. POS\n\t5. Nug-PN POS\n\t6. ATM (h)\n* The data suggests that the PMC Gold Dash Cards were used more frequently in the Gard type/highlink account/harium category, followed by Gary Smith. The other categories had little to no usage of these cards.\n* It is also worth noting that there was no usage of these cards in the ATM (h) category from 2012 to 2019, and in the POS category from 2009 to 2019. Similarly, there was no usage of these cards in the Nug-PN POS category from 2010 to 2019.\n\nOverall, the data indicates that the usage of PMC Gold Dash Cards was limited and mainly concentrated in the Gard type/highlink account/harium and Gary Smith categories.\nThe columns are PNC Gold Debit Cards (not actively sold products), Col1, Col2, Col3, Col4",
-    "start_index": 11638,
-    "end_index": 13080,
-    "num_tokens": 297
+    "topic": "Nationally Based Roles",
+    "content": "# # 5 . Nationally Based Roles If you are nationally based , i.e . your role covers the whole of the UK , all of your travel to third parties and Booker locations ( other than to and from a normal place of work e.g . Watford Office ) can be claimed . I am nationally based and do not have a normal place of work . On Monday I travel to a store in Leeds , on Tuesday I travel to a store in Scarborough , and on Wednesday I travel to a store in Bristol . I can claim all of my journeys to Booker * * locations * * or third parties as none of them have a set pattern or regularity and therefore are not my ordinary commute . I am nationally based and once a week I work from the Northampton branch . This is a normal place of work for me and I can not claim my journey as it is my ordinary commute . During the rest of the week , I travel to different Booker sites around the * * country , with no set pattern or regularity . I can claim all of my journeys to these sites as none of them are my ordinary * * commute . However if I have more locations that I visit on a weekly basis , I can not claim for these as they would be classed as normal daily commute .",
+    "start_index": 10260,
+    "end_index": 11417,
+    "num_tokens": 249
   },
   {
-    "topic": "Considerations Before Changing Card Limits",
-    "content": "Before changing a cardholder's ATM or POS daily limits \n\nBefore taking any action in EDGE/Service Browser/SPIRIT to change a debit/banking card's ATM, PIN POS or non-PIN POS limit:\n\n1.  \n\nFollow existing customer identification procedures - Verify that the customer who is requesting the maintenance is the cardholder for a personal\n\n or an authorized signer for a \n.\naccount\nbusiness account\n\n2.  \n\nConduct a \nthorough review of the customer's existing accounts - \nCheck for alerts and review contact history for suspicious or unusual activity to\n\n3.  \n\ndetermine if there's any reason the debit/banking card maintenance shouldn't be performed (such as an alert for a stolen wallet, unsatisfactory account or\nATM fraud). If there is anything suspicious, refer the situation to your manager.\nLook for recent address changes - Look for a recent address change, which \nindicate a possible fraud attempt because suspects often act by\ncould \n\ncalling to change customer/account information to avoid direct contact with a branch employee who might recognize the individual isn't the actual\ncustomer.\n\nIf anything seems \n(such as unusual transactions around the time the address change took place), \ncontinue with the debit/banking card\nsuspicious \ndon't \n\ntransaction daily limit change.\n \n  \n  \nCustomer Connection\n\nIf you can't complete the card maintenance due to suspicious or unusual activity, tell the customer you can't complete the card maintenance at this time. If\nthe customer seems upset, apologize for any inconvenience and refer the situation to your manager.  If the activity is determined to be suspicious or\nfraudulent, refer to \n to determine whether reporting is necessary.\nReporting Suspected Fraud and Other Incidents\n\nManagers/team leaders: Talk to the customer about the debit/banking card maintenance request and properly identify the customer. Conduct a thorough\nreview of the customer's account(s). Check for alerts and review contact history for suspicious or unusual activity to determine if there's any reason the\ncard maintenance shouldn't be performed (such as an alert for a stolen wallet, unsatisfactory account or ATM fraud). \n around whether\nUse your discretion\n\nto process the limit change. Document your findings and your action taken in \n and \n.\nShared Notes\nContact History\n\nDetermine if there's a status code/card restriction on the card - If the \nfield shows that the card has a \nCurrent Code/Hot Code/Card Restriction \n\n assigned to it (also referred to as a hot or warm code), you won't be able to process",
-    "start_index": 13081,
-    "end_index": 15623,
-    "num_tokens": 438
+    "topic": "Temporary Workplace",
+    "content": "# # 6 . Temporary Workplace A location is a temporary workplace if you visit there only to perform a task of limited duration , or for a temporary purpose , even if you are visiting it regularly , i.e. , weekly , as long as this is for a period of less than 12 months . This also applies to you if you are on secondment to a different location for less than 24 months , working on a project , covering someone else 's role etc . I work in Hatfield DC but I 'm currently working in Hemel Hempstead DC for 10 months in order to work on a project . * * Even * * though I am attending the Hemel Hempstead * * site on a regular basis for 10 months , the project is a task of limited duration * * and temporary purpose and therefore I can claim my commute from home to Hemel Hempstead , unless it is closer than my normal ordinary commute . Hatfield would still be classed as my normal place of work . If I visit Hatfield * * during my time on * * the project , I can not claim for this journey .",
+    "start_index": 11418,
+    "end_index": 12408,
+    "num_tokens": 209
+  },
+  {
+    "topic": "When Does A Temporary Workplace Become A Permanent Workplace?",
+    "content": "# # 7 . When Does A Temporary Workplace Become A Permanent Workplace ? Where a temporary location becomes permanent , travel becomes ordinary commute . If you are working at a location for a period of continuous work which lasts , or is likely to last , more than 12 months then this would be classed as a permanent location . A period of continuous work is classed as a period of work where duties of the role are performed to a significant extent at a workplace . HMRC class a 'significant extent ' at a workplace as 40 % or more of your working time spent there . This means that where you have spent or are likely to spend 40 % or more of your working time at a particular workplace over a period of 12 months , it will be classed as a permanent workplace . I work in Peterborough but I 'm also working on a project in Wellingborough DC on Wednesdays , Thursdays , and Fridays for 18 months . Because I spend more than 40 % of my working time at Wellingborough * * over a period of more than 12 months , * * Wellingborough is also a permanent workplace and I can not claim for my journey as it is my ordinary * * commute . * * However , secondments are an exception to this . Your secondment duration can last up to 24 months before being classed as a normal commute . The location will cease to be a temporary workplace from the date the expectation of the length of secondment changes . I am currently on secondment from Chester branch to Liverpool branch * * and have been for 17 months of an 18 month * * secondment . I have been claiming for my journey from home to the Liverpool branch . Yesterday I was told that my secondment would be extended by a further 10 months . From this point onwards I can no longer claim my journey to Liverpool as the secondment * * will last for more than 24 months and therefore is classed as a permanent place of work . * *",
+    "start_index": 12409,
+    "end_index": 14275,
+    "num_tokens": 369
+  },
+  {
+    "topic": "Guide info and ownership details",
+    "content": "| Guide info Version No . | Date of change | Summary of change | | | -- -- -- -- -- -- -- -- -- -- -- -- -- | -- -- -- -- -- -- -- -- -- | -- -- -- -- -- -- -- -- -- -- -| -- -- -- -- -- -| | 1 | February 2023 | - | New guide | Guide * * owner : * * Human Resources # # Ownership And Confidentiality This document should n't be shared with anyone externally without permission from your Director . This guide and any associated documentation remains the property of Booker and should be returned if requested . This is an online document . Hard copies and downloaded versions are valid only on the day printed or downloaded . It is the responsibility of colleagues to check the current status of this document on Our Booker .",
+    "start_index": 14276,
+    "end_index": 15001,
+    "num_tokens": 155
+  },
+  {
+    "topic": "Frequently Asked Questions",
+    "content": "# # Frequently Asked Questions Q - If I am only visiting my regular place or work 35/40 per year , would this still be classed as my regular place of work as I am not going to it every week ? A - This would still be classed as your normal place of work even if you miss some weeks in the year due to other commitments , as in the main it is still your normal place of work .",
+    "start_index": 15002,
+    "end_index": 15376,
+    "num_tokens": 82
+  },
+  {
+    "topic": "Appendix 1 - Commute Type & What You Can Claim For",
+    "content": "# Appendix 1 - Commute Type & What You Can Claim For | Commute Type | Description | What is your normal place of work and what can you claim for | | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --Here are the chunks based on the provided text corpus:",
+    "start_index": 15377,
+    "end_index": 15654,
+    "num_tokens": 69
+  },
+  {
+    "topic": "Claiming daily travel expenses for temporary cover or project work",
+    "content": "covering someone 's role or working on a project etc you can claim your daily travel from home up to 12 months . After this time , it becomes a normal daily travel .",
+    "start_index": 15655,
+    "end_index": 15820,
+    "num_tokens": 34
+  },
+  {
+    "topic": "Claiming daily travel expenses while on secondment",
+    "content": "If you are on secondment , you can claim your daily travel from home for a period that does not exceed 24 months . ( Should you have completed 19 months and then be extended for a further 6 months , you are then unable to claim normal daily travel from that point in time , due to your secondment period now being beyond 24 months ) .",
+    "start_index": 15821,
+    "end_index": 16155,
+    "num_tokens": 68
+  },
+  {
+    "topic": "Dual sited work with shorter business journey than normal daily commute",
+    "content": "Being cost conscious we do not expect you to claim for this journey .",
+    "start_index": 16156,
+    "end_index": 16225,
+    "num_tokens": 14
+  },
+  {
+    "topic": "Dual sited work with longer business journey than normal daily commute",
+    "content": "You would have to take off normal daily travel before claiming for the business trip .",
+    "start_index": 16226,
+    "end_index": 16312,
+    "num_tokens": 16
+  },
+  {
+    "topic": "Rotating meetings within a small proximity on a weekly basis",
+    "content": "If your meetings are in sites within 10 square miles of each other , they would be classed as an ordinary commute and can not be claimed for .",
+    "start_index": 16313,
+    "end_index": 16455,
+    "num_tokens": 29
+  },
+  {
+    "topic": "Weekly short meetings with a supplier",
+    "content": "This would be classed as your normal daily commute due to your weekly visit . It is based on the regularity of the visit rather than the length of time that you are there .",
+    "start_index": 16456,
+    "end_index": 16628,
+    "num_tokens": 35
+  },
+  {
+    "topic": "Definition of a normal place of work or ordinary commute",
+    "content": "* A normal place of work or ordinary commute is a site that you visit at least once a week . It is possible to have multiple sites that are classed as an ordinary commute or usual work place .",
+    "start_index": 16629,
+    "end_index": 16821,
+    "num_tokens": 40
+  },
+  {
+    "topic": "Consequences of breaching the policy",
+    "content": "* Any breach of policy could lead to the colleague being treated as receiving free fuel in addition to being taxed for the car . Free fuel BiK is calculated , currently by : Your car 's CO2 emissions x the fuel benefit charge ( currently \u00a325,300 ) x your income tax bracket . - Please note that it is the Drivers responsibility to determine that they are using the correct category .",
+    "start_index": 16822,
+    "end_index": 17205,
+    "num_tokens": 73
   }
 ]

@@ -204,7 +204,7 @@ if __name__ == "__main__":
     start_time = time.time()
     log("Called PDF extracter")
     # corpus = extract_data(pdf_path_or_url=r"./data\mlpdf.pdf")
-    corpus = main(r"E:\Projects\SA - R&D\chunking\resources\data\DailyLimit-ProcedureDetailPDF.pdf")
+    corpus = main(r"E:\Projects\SA - R&D\chunking\resources\data\Companycar.pdf")
     log("Extracted PDF data")
     print(corpus)
     # corpus = format_text(corpus)

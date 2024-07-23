@@ -1,15 +1,19 @@
 import sys
 
-# sys.path.append(r'E:\Projects\SA - R&D\multimodal_assistant\llm')
+sys.path.append(r"E:\\Projects\\SA - R&D\\chunking")
+# sys.path.append(r'E:\\Projects\\SA - R&D\\multimodal_assistant\llm')
 import os
 import fitz
 import pandas as pd
 import os
 from langchain.docstore.document import Document
-from llm_client import LLMClient
+# from GenerativeAIExamples.RetrievalAugmentedGeneration.examples.multimodal_rag.llm.llm_client import LLMClient
+# from llm_client import LLMClient
 from PIL import Image
 from io import BytesIO
 import base64
+# from GenerativeAIExamples.RetrievalAugmentedGeneration.common.utils import get_config
+# from GenerativeAIExamples.RetrievalAugmentedGeneration.common.tracing import langchain_instrumentation_method_wrapper
 
 
 def get_b64_image(image_path):
@@ -19,34 +23,36 @@ def get_b64_image(image_path):
     b64_string = base64.b64encode(buffered.getvalue()).decode("utf-8")
     return b64_string
 
-def is_graph(image_path):
-    # Placeholder function for graph detection logic
-    # Implement graph detection algorithm here
-    neva = LLMClient("neva_22b")
-    b64_string = get_b64_image(image_path)
-    res = neva.multimodal_invoke(b64_string, creativity = 0, quality = 9, complexity = 0, verbosity = 9).content
-    # print(res)
-    if "graph" in res or "plot" in res or "chart" in res:
-        return True
-    else:
-        return False
+# @langchain_instrumentation_method_wrapper
+# def is_graph(cb_handler, image_path):
+#     # Placeholder function for graph detection logic
+#     # Implement graph detection algorithm here
+#     neva = LLMClient("ai-neva-22b", cb_handler=cb_handler)
+#     b64_string = get_b64_image(image_path)
+#     res = neva.multimodal_invoke(b64_string, creativity = 0, quality = 9, complexity = 0, verbosity = 9).content
+#     if "graph" in res or "plot" in res or "chart" in res:
+#         return True
+#     else:
+#         return False
 
-def process_graph(image_path):
-    # Placeholder function for graph processing logic
-    # Implement graph processing algorithm here
-    # Call DePlot through the API
-    deplot = LLMClient("deplot")
-    b64_string = get_b64_image(image_path)
-    res = deplot.multimodal_invoke(b64_string)
-    deplot_description = res.content
-    mixtral = LLMClient(model_name="mixtral_8x7b")
-    response = mixtral.chat_with_prompt(system_prompt="Your responsibility is to explain charts. You are an expert in describing the responses of linearized tables into plain English text for LLMs to use.", 
-                             prompt="Explain the following linearized table. " + deplot_description)
-    full_response = ""
-    for chunk in response:
-        full_response += chunk
-    # print(full_response)
-    return full_response
+# @langchain_instrumentation_method_wrapper
+# def process_graph(cb_handler, image_path):
+#     # Placeholder function for graph processing logic
+#     # Implement graph processing algorithm here
+#     # Call DePlot through the API
+#     deplot = LLMClient("ai-google-deplot")
+#     b64_string = get_b64_image(image_path)
+#     res = deplot.multimodal_invoke(b64_string)
+#     deplot_description = res.content
+#     # Accessing the model name environment variable
+#     # settings = get_config()
+#     mixtral = LLMClient(model_name="mixtral_8x7b", is_response_generator=True, cb_handler=cb_handler)
+#     response = mixtral.chat_with_prompt(system_prompt="Your responsibility is to explain charts. You are an expert in describing the responses of linearized tables into plain English text for LLMs to use.",
+#                              prompt="Explain the following linearized table. " + deplot_description)
+#     full_response = ""
+#     for chunk in response:
+#         full_response += chunk
+#     return full_response
 
 def extract_text_around_item(text_blocks, bbox, page_height, threshold_percentage=0.1):
     before_text, after_text = "", ""
@@ -144,25 +150,25 @@ def parse_all_tables(filename, page, pagenum, text_blocks, ongoing_tables):
                 # Open and display the image
                 # img = Image.open(table_img_path)
                 # img.show()
-                description = process_graph(table_img_path)
-                ctr += 1
+                # description = process_graph(table_img_path)
+                # ctr += 1
 
-                caption = before_text.replace("\n", " ") + description + after_text.replace("\n", " ")
-                if before_text == "" and after_text == "":
-                    caption = " ".join(tab.header.names)
+                # caption = before_text.replace("\n", " ") + description + after_text.replace("\n", " ")
+                # if before_text == "" and after_text == "":
+                #     caption = " ".join(tab.header.names)
 
 
                 table_metadata = {
                     "source": f"{filename[:-4]}-page{pagenum}-table{ctr}",
                     "dataframe": df_xlsx_path,
                     "image": table_img_path,
-                    "caption": caption,
+                    # "caption": caption,
                     "type": "table",
                     "page_num": pagenum
                 }
                 all_cols = ", ".join(list(pandas_df.columns.values))
                 
-                doc = Document(page_content="This is a table with the caption: " + caption + f"\nThe columns are {all_cols}", metadata=table_metadata)
+                doc = Document(f"\nThe columns are {all_cols}", metadata=table_metadata)
                 table_docs.append(doc)
                 
                 # print(table_docs)
@@ -200,21 +206,21 @@ def parse_all_images(filename, page, pagenum, text_blocks):
             continue
 
         # Process the image if it's a graph
-        image_description = " "
-        if is_graph(image_path):
-            image_description = process_graph(image_path)
+        # image_description = " "
+        # if is_graph(image_path):
+        #     image_description = process_graph(image_path)
 
-        # Combine the texts to form a caption
-        caption = before_text.replace("\n", " ") + image_description + after_text.replace("\n", " ")
+        # # Combine the texts to form a caption
+        # caption = before_text.replace("\n", " ") + image_description + after_text.replace("\n", " ")
 
         image_metadata = {
             "source": f"{filename[:-4]}-page{pagenum}-image{xref}",
             "image": image_path,
-            "caption": caption,
+            # "caption": caption,
             "type": "image",
             "page_num": pagenum
         }
-        image_docs.append(Document(page_content="This is an image with the caption: " + caption, metadata=image_metadata))
+        image_docs.append(Document(page_content="Image Description(Skipped)",metadata=image_metadata))
     return image_docs
 
 def get_pdf_documents(filepath):
@@ -296,11 +302,11 @@ def remove_duplicate_paragraphs(text):
     
     return result_text
 
-def main(pdf_filepath,nv_api_key='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'):
+def main(pdf_filepath,nv_api_key='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'):
     
 
     # Set the value of NVIDIA_API_KEY environment variable
-    os.environ['NVIDIA_API_KEY'] = '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'
+    os.environ['NVIDIA_API_KEY'] = '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'
     # Call the function to extract documents from the PDF
     pdf_documents_dl = get_pdf_documents(pdf_filepath)
     # Initialize an empty string to store the concatenated documents
@@ -315,3 +321,6 @@ def main(pdf_filepath,nv_api_key='nvapi-zySXiU9ElQMVKPqoE1dFAVR8z9RCBL377vWqIB6k
     result = remove_duplicate_paragraphs(result_string)
     
     return result
+
+if __name__ == "__main__":
+    print(main(r"E:\Projects\SA - R&D\chunking\resources\data\Companycar.pdf"))
