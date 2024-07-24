@@ -203,12 +203,10 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
 
             formatted_chunks.append(formatted_chunk)
             
-        if is_folder:
-            with open(r'results\raw_chunks.json', 'a') as json_file:
-                json.dump(formatted_chunks, json_file, indent=2)
-        else:
+            
             with open(r'results\raw_chunks.json', 'w') as json_file:
                 json.dump(formatted_chunks, json_file, indent=2)
+            
             
         return formatted_chunks
     
@@ -239,7 +237,7 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
         total_tokens += len(tokens)
         for chunk_content in chunked_content:
             # ignore this for now finding better ways to find indexes
-            match = fuzz.partial_ratio(corpus, chunk_content)
+            # match = fuzz.partial_ratio(corpus, chunk_content)
             
             end_index = min(len(corpus), start_index + len(chunk_content))
             
@@ -335,7 +333,7 @@ def chunk_single_pdf(timer : bool,pdf_path : str,display_flag = False,save_flag 
     
     log("Post Processing chunks")
     
-    pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=False)
+    pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=False,is_fresh=True)
     
     if timer:
         end_time = time.time()
@@ -388,3 +386,11 @@ def chunk_multiple_pdf(timer : bool,folder_path : str,display_flag = False,save_
         total_time = end_time - start_time
         
         log(f" Total time taken to run: {total_time}")
+
+
+if __name__ == "__main__":
+    
+    os.environ['GPT_KEY'] = "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"
+    os.environ['GPT_MODEL_NAME'] = "gpt-4o"
+
+    chunk_multiple_pdf(True,r"E:\Projects\SA - R&D\chunking\data",False,True)
