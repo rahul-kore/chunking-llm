@@ -91,7 +91,7 @@ def format_text(raw_text:str):
 # Call LLM
 def generate_raw_chunks(user_prompt:str)->str:
     
-    client = anthropic.Client(api_key="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")
+    client = anthropic.Client(api_key="Your api key here")
 
     system_prompt = """Given the provided text data, your task is to chunk the text into meaningful segments or 'chunks' based on the topics or sections mentioned within the text. Each chunk should encapsulate a distinct topic or subtopic discussed within the text corpus. Your goal is to parse the text into coherent units that represent the main themes or ideas conveyed in the text.
 
