@@ -322,5 +322,5 @@ def main(pdf_filepath,nv_api_key='nvapi-CJcz6QLRlPllR2NlOA4xNiv6lAfGBcB36UQTkws6
     
     return result
 
-if __name__ == "__main__":
-    print(main(r"E:\Projects\SA - R&D\chunking\resources\data\Companycar.pdf"))
+# if __name__ == "__main__":
+#     print(main(r"E:\Projects\SA - R&D\chunking\resources\data\Companycar.pdf"))

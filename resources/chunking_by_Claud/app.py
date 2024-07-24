@@ -1,5 +1,5 @@
 import sys
-sys.path.append('E:\\Projects\\SA - R&D\\chunking\\resources')
+sys.path.append('E:\\Projects\\SA - R&D\\chunking')
 from nltk.tokenize import word_tokenize
 from pypdf import PdfReader
 from fuzzywuzzy import fuzz
@@ -12,7 +12,7 @@ import json
 import re
 import io
 import os
-from pdfExt import main
+from utils.pdfExt import main
 nltk.download('punkt')
 
 
