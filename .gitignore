@@ -1,7 +1,3 @@
 *.pyc
 __pycache__
-vectorstore
 venv
-image.ipynb
-Image_Search.ipynb
-chunking_by_GPT
