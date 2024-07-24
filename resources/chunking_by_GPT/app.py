@@ -390,7 +390,7 @@ def chunk_multiple_pdf(timer : bool,folder_path : str,display_flag = False,save_
 
 if __name__ == "__main__":
     
-    os.environ['GPT_KEY'] = "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"
+    os.environ['GPT_KEY'] = "Your gpt key here"
     os.environ['GPT_MODEL_NAME'] = "gpt-4o"
 
     chunk_multiple_pdf(True,r"E:\Projects\SA - R&D\chunking\data",False,True)
