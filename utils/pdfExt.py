@@ -5,6 +5,7 @@ sys.path.append(r"E:\\Projects\\SA - R&D\\chunking")
 import os
 import fitz
 import pandas as pd
+from textwrap import wrap
 import os
 from langchain.docstore.document import Document
 # from GenerativeAIExamples.RetrievalAugmentedGeneration.examples.multimodal_rag.llm.llm_client import LLMClient
@@ -102,6 +103,48 @@ def process_text_blocks(text_blocks):
 
     return grouped_blocks
 
+
+def df_to_table_string(df, max_col_width=50):
+    def wrap_text(text, width):
+        return wrap(str(text), width)
+    
+    # Wrap text in each cell based on the specified column width
+    wrapped_df = df.map(lambda x: wrap_text(x, max_col_width))
+    
+    # Calculate the maximum number of lines in any cell for each row
+    max_lines_per_row = wrapped_df.map(len).max(axis=1)
+    
+    # Create a list to hold the formatted rows
+    formatted_rows = []
+    
+    # Format the header
+    header_parts = [wrap_text(col, max_col_width) for col in df.columns]
+    max_header_lines = max(len(part) for part in header_parts)
+    
+    for line_num in range(max_header_lines):
+        line_parts = []
+        for part in header_parts:
+            if line_num < len(part):
+                line_parts.append(f"{part[line_num]:<{max_col_width}}")
+            else:
+                line_parts.append(" " * max_col_width)
+        formatted_rows.append(" | ".join(line_parts))
+    formatted_rows.append("\n\n")
+    for i, row in wrapped_df.iterrows():
+        row_lines = [""] * max_lines_per_row[i]
+        for col, cell in row.items():
+            for line_num, line in enumerate(cell):
+                row_lines[line_num] += f"{line:<{max_col_width}} | "
+            for line_num in range(len(cell), max_lines_per_row[i]):
+                row_lines[line_num] += " " * max_col_width + " | "
+        formatted_rows.extend(row_lines)
+    
+    # Join all the formatted rows into a single string
+    table_string = "\n".join(formatted_rows)
+    
+    return table_string
+
+
 def parse_all_tables(filename, page, pagenum, text_blocks, ongoing_tables):
     table_docs = []
     table_bboxes = []
@@ -166,9 +209,10 @@ def parse_all_tables(filename, page, pagenum, text_blocks, ongoing_tables):
                     "type": "table",
                     "page_num": pagenum
                 }
-                all_cols = ", ".join(list(pandas_df.columns.values))
-                
-                doc = Document(f"\nThe columns are {all_cols}", metadata=table_metadata)
+                # all_cols = ", ".join(list(pandas_df.columns.values))
+                df_str = df_to_table_string(pandas_df)
+                # print(f"Pandas df \n\n {pandas_df}","\n\n",df_str)
+                doc = Document(f"\nTable content:\n\n {df_str} ", metadata=table_metadata)
                 table_docs.append(doc)
                 
                 # print(table_docs)
@@ -303,7 +347,7 @@ def remove_duplicate_paragraphs(text):
     return result_text
 
 def main(pdf_filepath,nv_api_key='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'):
-    
+
 
     # Set the value of NVIDIA_API_KEY environment variable
     os.environ['NVIDIA_API_KEY'] = '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'
@@ -320,7 +364,9 @@ def main(pdf_filepath,nv_api_key='nvapi-CJcz6QLRlPllR2NlOA4xNiv6lAfGBcB36UQTkws6
 
     result = remove_duplicate_paragraphs(result_string)
     
-    return result
+    return result,os.path.basename(pdf_filepath)
 
 # if __name__ == "__main__":
-#     print(main(r"E:\Projects\SA - R&D\chunking\resources\data\Companycar.pdf"))
+    # with open('output.txt', 'w') as file:
+    #     file.write(main(r"E:\Projects\SA - R&D\chunking\data\Adoption Policy.pdf")[0])
+    # print(main(r"E:\Projects\SA - R&D\chunking\data\Adoption Policy.pdf")[0])

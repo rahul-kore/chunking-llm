@@ -21,7 +21,7 @@ import time
 import re
 import io
 import os
-nltk.download('punkt')
+# nltk.download('punkt')
 
 
 def log(message:str,success_flag=True):
@@ -125,7 +125,6 @@ def generate_raw_chunks(user_prompt:str):
     </important>
 
     """
-    log("Genrating raw chunks")
     try:
         chat_completion = client.chat.completions.create(
             model=os.getenv('GPT_MODEL_NAME'),
@@ -174,7 +173,7 @@ def split_corpse(text):
 
     return segments
 
-def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
+def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh,file_name):
 
     def convert_to_json(raw_data):
 
@@ -186,7 +185,6 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
 
         for chunk in chunks[1:]:
             formatted_chunk = {}
-            
             topic_match = topic_pattern.search(chunk)
             if topic_match:
                 formatted_chunk['topic'] = topic_match.group(1).strip()
@@ -200,18 +198,13 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
                 content = content_match.group(1).strip()
                 content = re.sub(r'\n</chunk \d+>$', '', content)
                 formatted_chunk['content'] = content
-
             formatted_chunks.append(formatted_chunk)
-            
-            
-            with open(r'results\raw_chunks.json', 'w') as json_file:
-                json.dump(formatted_chunks, json_file, indent=2)
-            
-            
+            # with open(r'results\raw_chunks.json', 'w') as json_file:
+            #     json.dump(formatted_chunks, json_file, indent=2)
         return formatted_chunks
     
     pre_form_json = convert_to_json(raw_chunks)
-    
+
     contents = [content["content"] for content in pre_form_json]
     topics = [topic["topic"] for topic in pre_form_json]
     subtopics = [subtopic.get("subtopic", None) for subtopic in pre_form_json]
@@ -222,10 +215,8 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
     for idx, content in enumerate(contents):
         topic = topics[idx]
         subtopic = subtopics[idx]
-       
         tokens = word_tokenize(content)
         
-        # Check if content exceeds 800 tokens
         if len(tokens) > 800:
             # Split content into smaller chunks
             num_chunks = len(tokens) // 800 + 1
@@ -235,12 +226,9 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
         else:
             chunked_content = [content]
         total_tokens += len(tokens)
+        
         for chunk_content in chunked_content:
-            # ignore this for now finding better ways to find indexes
-            # match = fuzz.partial_ratio(corpus, chunk_content)
-            
             end_index = min(len(corpus), start_index + len(chunk_content))
-            
             if subtopic != None:
                 output.append({
                 "title": topic,
@@ -248,7 +236,8 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
                 "content": chunk_content,
                 "start_index": start_index,
                 "end_index": end_index,
-                "num_tokens":len(tokens)
+                "num_tokens":len(tokens),
+                "doc_name" : file_name
             }) 
                 
             else:
@@ -257,20 +246,20 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
                 "content": chunk_content,
                 "start_index": start_index,
                 "end_index": end_index,
-                "num_tokens":len(tokens)
-                })
-            
+                "num_tokens":len(tokens),
+                "doc_name" : file_name
+            })
             
             start_index = end_index + 1
-    
+            
+    if display_flag:
+        print(json.dumps(output, indent=2))
+        
     if save_flag:
         file_path = r'results\chunks.json'
-
         if is_folder:
             if is_fresh:
                 existing_data = []
-                is_fresh = False
-                
             else:
                 with open(file_path, 'r') as file:
                     existing_data = json.load(file)
@@ -279,119 +268,95 @@ def pre_process(corpus, raw_chunks, save_flag, display_flag,is_folder,is_fresh):
 
             with open(file_path, 'w') as json_file:
                 json.dump(existing_data, json_file, indent=2)
-                
-            
+        
         else:
             with open(file_path, 'w') as json_file:
                 json.dump(output, json_file, indent=2)
-            log(r"please Take a look at results\chunks.json for chunks")
-            
-            return
-
-        log(r"please Take a look at results\chunks.json for chunks")
-
-            
             
     else:
         warnings.warn("Note : Chunks are not saved \n Reason : save_flag - False ",category=Warning)
             
-    if display_flag:
-        print(json.dumps(output, indent=2))
         
-    return is_fresh
+    return False
             
     
         
 def chunk_single_pdf(timer : bool,pdf_path : str,display_flag = False,save_flag  = True):
     
-    
     if timer:
         start_time = time.time()
     
-    
     log("Called PDF extracter")
     try:
-        corpus = main(pdf_filepath=pdf_path)
+        corpus,file_name = main(pdf_filepath=pdf_path)
     except FileNotFoundError as e:
         print("cant open file")
         sys.exit(-1)
         
     log("Extracted PDF data")
-    # print(corpus)
     corpus = format_text(corpus)
-    # print("\n\n")
     print(corpus)
-    
     result = split_corpse(corpus)
     raw_chunk = ''
+    
+    log("Genrating raw chunks")
     for segment in result:
         raw_chunk_ = generate_raw_chunks(user_prompt=segment)
         raw_chunk += "\n\n" + raw_chunk_
-        
     # log("Raw Chunks")
     # print(raw_chunk)
     
     log("Post Processing chunks")
-    
-    pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=False,is_fresh=True)
+    pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=False,is_fresh=True,file_name=file_name)
     
     if timer:
         end_time = time.time()
-        
-        # Calculate the total time taken
         total_time = end_time - start_time
-        
         log(f" Total time taken to run: {total_time}")
+
 
 def chunk_multiple_pdf(timer : bool,folder_path : str,display_flag = False,save_flag  = True):
     
     if timer:
         start_time = time.time()
-    
+        
     is_fresh = True
-    log("Called PDF extracter")
+    # log("Called PDF extracter")
     for filename in os.listdir(folder_path):
         # Check if the file is a PDF
         if filename.endswith('.pdf'):
             pdf_path = os.path.join(folder_path, filename)
             try:
-                corpus = main(pdf_filepath=pdf_path)
+                corpus,file_name = main(pdf_filepath=pdf_path)
             except FileNotFoundError as e:
                 print("cant open file")
                 sys.exit(-1)
         
-            log(f"Extracted PDF data for {filename}")
+            # log(f"Extracted PDF data for {filename}")
             corpus = format_text(corpus)
-            # print("\n\n")
-            print(corpus)
-            
+            # print(corpus)
             result = split_corpse(corpus)
             raw_chunk = ''
+            
+            # log("Genrating raw chunks for {filename}")
             for segment in result:
                 raw_chunk_ = generate_raw_chunks(user_prompt=segment)
                 raw_chunk += "\n\n" + raw_chunk_
-                
-            log("Raw Chunks")
-            print(raw_chunk)
+            # log("Raw Chunks")
+            # print(raw_chunk)
             
-            log(f"Post Processing raw chunks for {filename}")
-            
-            is_fresh = pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=True,is_fresh=is_fresh)
+            # log(f"Post Processing raw chunks for {filename}")
+            is_fresh = pre_process(corpus=corpus,raw_chunks=raw_chunk,save_flag=save_flag,display_flag=display_flag,is_folder=True,is_fresh=is_fresh,file_name=file_name)
             log(f"Chunked {filename} succesfully")
             
     if timer:
         end_time = time.time()
-        
-        # Calculate the total time taken
         total_time = end_time - start_time
-        
         log(f" Total time taken to run: {total_time}")
 
-
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    os.environ['GPT_KEY'] = "Your key here"
-    os.environ['GPT_MODEL_NAME'] = "gpt-4o"
-
-    chunk_single_pdf(True,r"E:\Projects\SA - R&D\chunking\data\mlpdf.pdf",False,True)
+#     os.environ['GPT_KEY'] = 'Your Key here please'
+#     os.environ['GPT_MODEL_NAME'] = "gpt-4o-mini"
+#     chunk_multiple_pdf(timer=True,folder_path = r"Your Folder path here",display_flag=False,save_flag=True)
 
