@@ -97,21 +97,59 @@ def format_text(raw_text:str):
 
 
 # Call LLM
-def generate_raw_chunks(user_prompt:str):
+# def generate_raw_chunks(user_prompt:str):
 
+#     client = OpenAI(
+#         api_key=os.getenv('GPT_KEY')
+#     )
+    
+#     system_prompt = """Given the provided text data, your task is to chunk the text into meaningful segments or 'chunks' based on the topics or sections mentioned within the text. Each chunk should encapsulate a distinct topic or subtopic discussed within the text corpus. Your goal is to parse the text into coherent units that represent the main themes or ideas conveyed in the text.
+
+#     You can identify the boundaries of each chunk by looking for section headers or topic labels within the text. These headers typically indicate the start of a new topic or section. Your output should consist of the identified chunks, along with their corresponding labels or headers.
+
+#     Please ensure that each chunk is clearly delineated and captures a cohesive set of information related to its respective topic or theme. Additionally, consider the overall structure and coherence of the chunks to facilitate understanding and interpretation by readers.
+
+#     Feel free to leverage the contextual information provided in the text to guide your chunking process. Remember, the objective is to organize the text into digestible segments that effectively convey the main ideas discussed within the text corpus.
+
+#     <important>Note: You should not modify the text in the corpus; your only job is to split (chunk) the corpus accordingly. your are strictly not allowed to reduce the content of chunk it should be same as the raw corpse provides. if the input corpse is 1000 tokents the output should also be 1000 tokens,if the input corpse is 2000 tokens the output tokents should be 2000.if a chunk croses 800 words please divide it if a chunk is 1600 words divide it by 800 woord chunk and 800 word chunk. 
+    
+#     The chunks should follow a format like this:
+
+#     <chunk 1>
+#     Topic:topic for chunk 1
+#     Content:content of Chunk 1
+#     </chunk 1>
+#     ...
+    
+#     Remember : you should not reduce content nor summarise it your only job is to divide corpse to chunks. the chunks should be a perfect sub-class of corpse(super-class).
+#     </important>
+
+#     """
+#     try:
+#         chat_completion = client.chat.completions.create(
+#             model=os.getenv('GPT_MODEL_NAME'),
+#             max_tokens=4096,
+#             messages=[
+#                 {"role": "system", "content": system_prompt},
+#                 {"role": "user", "content": f"Here is the corpse\n <important> You are strictly not allowed to modify this corpse your only job is to split this corpse into chunks(that makes sense)</important>\n<corpse>\n {user_prompt} \n</corpse>"}
+#             ]
+#         )
+
+#         return chat_completion.choices[0].message.content
+    
+#     except openai.APIConnectionError as e:
+#         warnings.warn("Network Error Retry Later",category=TimeoutError)
+#         sys.exit(-1)
+
+def generate_raw_chunks(user_prompt:str):
+    
     client = OpenAI(
         api_key=os.getenv('GPT_KEY')
     )
     
-    system_prompt = """Given the provided text data, your task is to chunk the text into meaningful segments or 'chunks' based on the topics or sections mentioned within the text. Each chunk should encapsulate a distinct topic or subtopic discussed within the text corpus. Your goal is to parse the text into coherent units that represent the main themes or ideas conveyed in the text.
+    system_prompt = """We have a Retrieval-Augmented Generation (RAG) System that will chunk the content, rank it, and retrieve the correct chunks when queried. Your task is to thoroughly understand this document and chunk it wisely so that any question can be accurately answered. Ensure that no hallucinations occur and that all chunks are factual. Please retain every single word from the document.
 
-    You can identify the boundaries of each chunk by looking for section headers or topic labels within the text. These headers typically indicate the start of a new topic or section. Your output should consist of the identified chunks, along with their corresponding labels or headers.
-
-    Please ensure that each chunk is clearly delineated and captures a cohesive set of information related to its respective topic or theme. Additionally, consider the overall structure and coherence of the chunks to facilitate understanding and interpretation by readers.
-
-    Feel free to leverage the contextual information provided in the text to guide your chunking process. Remember, the objective is to organize the text into digestible segments that effectively convey the main ideas discussed within the text corpus.
-
-    <important>Note: You should not modify the text in the corpus; your only job is to split (chunk) the corpus accordingly. your are strictly not allowed to reduce the content of chunk it should be same as the raw corpse provides. if the input corpse is 1000 tokents the output should also be 1000 tokens,if the input corpse is 2000 tokens the output tokents should be 2000.if a chunk croses 800 words please divide it if a chunk is 1600 words divide it by 800 woord chunk and 800 word chunk. 
+    <important>Note: The document may have polish content so understand the content carefully ,You should not modify the text in the corpus; your only job is to split (chunk) the corpus accordingly. your are strictly not allowed to reduce the content of chunk it should be same as the raw corpse provides. if the input corpse is 1000 tokents the output should also be 1000 tokens,if the input corpse is 2000 tokens the output tokents should be 2000.if a chunk croses 800 words please divide it if a chunk is 1600 words divide it by 800 woord chunk and 800 word chunk. 
     
     The chunks should follow a format like this:
 
@@ -354,9 +392,9 @@ def chunk_multiple_pdf(timer : bool,folder_path : str,display_flag = False,save_
         total_time = end_time - start_time
         log(f" Total time taken to run: {total_time}")
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     os.environ['GPT_KEY'] = 'Your Key here please'
-#     os.environ['GPT_MODEL_NAME'] = "gpt-4o-mini"
-#     chunk_multiple_pdf(timer=True,folder_path = r"Your Folder path here",display_flag=False,save_flag=True)
+    os.environ['GPT_KEY'] = 'Your Key Here'
+    os.environ['GPT_MODEL_NAME'] = "gpt-4o-mini"
+    chunk_single_pdf(timer=True,pdf_path = r"Enter Your PDF path here",display_flag=False,save_flag=True)
 
