@@ -10,6 +10,10 @@ This project provides a method to chunk PDFs based on their meaning using AI mod
 - **AI Processing**: Uses Claude or GPT based on user preference to generate rough chunks of the PDF content.
 - **Post-Processing**: Refines rough chunks into final, meaningful chunks.
 
+## Architecture Diagram
+
+![My Image](Arch-Diagram.jpg)
+
 ## Installation
 
 To get started, clone the repository and install the necessary dependencies.
