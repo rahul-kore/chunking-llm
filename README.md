@@ -61,11 +61,3 @@ The Colab notebook demonstrates the steps to chunk PDFs intelligently:
 ### Example
 
 A sample implementation using Google Colab is provided. [Open the Colab Notebook](https://colab.research.google.com/drive/1jPkKNRANNWuyKfmY6Y4f0unmxbRiE-K3?usp=sharing) to see the intelligent chunking in action.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or suggestions, please open an issue.
